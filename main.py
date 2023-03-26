@@ -12,7 +12,6 @@ def home():
 def words(word):
     df = pd.read_csv("dictionary.csv")
     definition = df.loc[df['word'] == word]['definition'].squeeze()
-    print(definition)
     return {"definition": definition,
             "word": word}
 
